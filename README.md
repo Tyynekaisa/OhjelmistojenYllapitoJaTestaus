@@ -2,7 +2,7 @@
 
 **AT00BY10-3012 Ohjelmistojen ylläpito ja testaus** harjoitustyöt:
 
-- H1: [Markdown & HTML](/tree/main/H1_Markdown%26HTML)
+- H1: [Markdown & HTML](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H1_Markdown%26HTML)
 - H2: Unit Testing (tulossa)
 - H3: Integration Testing (tulossa)
 - H4: UI Testing (tulossa)
