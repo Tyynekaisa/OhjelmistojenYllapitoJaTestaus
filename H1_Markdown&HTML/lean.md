@@ -43,6 +43,8 @@ Lean korostaa myös:
 
 > Lean ei ole vain joukko työkaluja, vaan ajattelutapa ja kulttuuri, jonka tavoitteena on tehdä vähemmällä enemmän - laadukkaammin, nopeammin ja asiakaslähtöisemmin.
 
+---
+
 ## Lähteet
 
 - Lean - Turha työ vähemmäksi. Intotalo Oy, 2018. [https://www.intotalo.com/wp-content/uploads/2018/03/OPAS-Lean-1.pdf](https://www.intotalo.com/wp-content/uploads/2018/03/OPAS-Lean-1.pdf)
@@ -50,3 +52,10 @@ Lean korostaa myös:
 - Gaugi, James. What is Lean, Process Excellence Network, 2023. [https://www.processexcellencenetwork.com/lean-six-sigma-business-performance/articles/what-is-lean](https://www.processexcellencenetwork.com/lean-six-sigma-business-performance/articles/what-is-lean)
 - Toyota Production System (TPS) & Lean. Strategos Inc, 2007. [https://strategosinc.com/RESOURCES/01-General/toyota_production.htm](https://strategosinc.com/RESOURCES/01-General/toyota_production.htm)
 - ChatGPT
+
+## Kirjoittajasta ja projektista
+
+Kaisa Juhola  
+LAB ammattikorkeakoulu, tieto- ja viestintätekniikka  
+
+Tämä on kurssin *AT00BY10-3012 Ohjelmistojen ylläpito ja testaus* harjoitustyö, jonka aiheena ovat Markdown ja HTML.
