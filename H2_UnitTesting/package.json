@@ -4,7 +4,7 @@
   "main": "src/main.js",
   "scripts": {
     "test": "mocha",
-    "main": "node main.js"
+    "demo": "node main.js"
   },
   "devDependencies": {
     "chai": "^6.2.2",
