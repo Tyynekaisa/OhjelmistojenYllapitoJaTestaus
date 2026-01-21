@@ -1,2 +1,9 @@
+# Dependency directories
 node_modules
+
+# IDE specific files
+.vscode
+
+# Additional folders for exercises and personal use
 luentoharjoitus
+Tehtäväpalautukset
