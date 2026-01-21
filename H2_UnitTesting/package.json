@@ -1,0 +1,17 @@
+{
+  "name": "mylib",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "mocha",
+    "main": "node main.js"
+  },
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^11.7.5"
+  },
+  "description": "Excercise for unit testing on Mocha and Chai.",
+  "directories": {
+    "test": "test"
+  }
+}
