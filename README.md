@@ -22,11 +22,11 @@ After this course, student is able to:
 
 ## Exercises
 
-- H1: [Markdown & HTML](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H1_Markdown%26HTML) 20.1.2026
-- H2: [Unit Testing](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H2_UnitTesting) 21.1.2026
-- H3: Integration Testing (coming later)
-- H4: UI Testing (coming later)
-- H5: WEB GUI Testing (coming later)
-- H6: Logging (coming later)
-- H7: Versioning and Licensing (coming later)
-- H8: Deployment (coming later)
+- [x] H1: [Markdown & HTML](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H1_Markdown%26HTML)
+- [x] H2: [Unit Testing](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H2_UnitTesting)
+- [ ] H3: Integration Testing
+- [ ] H4: UI Testing
+- [ ] H5: WEB GUI Testing
+- [ ] H6: Logging
+- [ ] H7: Versioning and Licensing
+- [ ] H8: Deployment
