@@ -27,7 +27,7 @@ The main program and the unit tests are **independent**: tests can be run withou
 │   └── mylib.js             # Math library
 ├── test/
 │   └── mylib.expect.test.js # Unit tests (Mocha + Chai)
-├── README.md                :red_circle: You are here
+├── README.md
 ├── main.js                  # Demo program
 ├── package-lock.json
 └── package.json

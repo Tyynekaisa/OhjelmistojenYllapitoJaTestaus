@@ -26,7 +26,7 @@ The goal of the assignment is to:
 │   └── Lean5.png
 ├── lean.html               # Converted HTML file
 ├── lean.md                 # Markdown document
-└── README.md               :red_circle: You are here
+└── README.md
 ```
 
 ## lean.md - Mardown document
