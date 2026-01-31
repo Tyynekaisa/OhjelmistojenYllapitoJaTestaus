@@ -111,6 +111,11 @@ The integration tests verify:
 
 The server is not started as a real HTTP listener during tests.
 Instead, the Express app is exported and tested directly.
+
+## Test Documentation
+
+// TO DO
+
 ## Usage
 
 ### Initialization
