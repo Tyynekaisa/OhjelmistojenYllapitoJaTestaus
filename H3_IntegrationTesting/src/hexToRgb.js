@@ -13,7 +13,8 @@
 
 function hexToRgb(hex) {
 
-  // Validate input type (must be string)
+  // Validate input type. Must be string.
+  // This also covers the case of undefined or null input.
   if (typeof hex !== "string") {
     throw new Error("Invalid hex color string");
   } 
@@ -21,11 +22,11 @@ function hexToRgb(hex) {
   if (hex.startsWith("#")) {
     hex = hex.slice(1);
   }
-  // Validate hex string length
+  // Validate hex string length. Must be exactly 6 characters.
   if (hex.length !== 6) {
     throw new Error("Invalid hex color string");
   }
-  // Validate hex string characters
+  // Validate hex string characters. Must be 0-9, A-F, a-f
   if (!/^[0-9A-Fa-f]{6}$/.test(hex)) {
     throw new Error("Invalid hex color string");
   }
