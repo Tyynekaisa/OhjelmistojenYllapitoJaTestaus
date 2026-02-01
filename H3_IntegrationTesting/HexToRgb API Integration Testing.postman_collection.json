@@ -1,0 +1,350 @@
+{
+  "info": {
+    "_postman_id": "893b7c98-f9a2-4d84-8b01-1c5e87d7f5b1",
+    "name": "HexToRgb API Integration Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48743614",
+    "_collection_link": "https://go.postman.co/collection/48743614-893b7c98-f9a2-4d84-8b01-1c5e87d7f5b1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET / - Root endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /hexToRgb – Valid hex (#FF5733)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/hexToRgb?hex=%23FF5733",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "hexToRgb"
+          ],
+          "query": [
+            {
+              "key": "hex",
+              "value": "#FF5733"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET /hexToRgb – Valid hex (#44aa68)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/hexToRgb?hex=%2344aa68",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "hexToRgb"
+              ],
+              "query": [
+                {
+                  "key": "hex",
+                  "value": "#44aa68"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "",
+          "header": [],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": ""
+        },
+        {
+          "name": "GET /hexToRgb – Valid hex (#123456)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/hexToRgb?hex=%23123456",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "hexToRgb"
+              ],
+              "query": [
+                {
+                  "key": "hex",
+                  "value": "#123456"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "",
+          "header": [],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "GET /hexToRgb – Valid hex (33FF57)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/hexToRgb?hex=33FF57",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "hexToRgb"
+          ],
+          "query": [
+            {
+              "key": "hex",
+              "value": "33FF57",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET /hexToRgb – Valid hex (987654)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/hexToRgb?hex=987654",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "hexToRgb"
+              ],
+              "query": [
+                {
+                  "key": "hex",
+                  "value": "987654"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "",
+          "header": [],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": ""
+        },
+        {
+          "name": "GET /hexToRgb – Valid hex (ffccff)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/hexToRgb?hex=ffccff",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "hexToRgb"
+              ],
+              "query": [
+                {
+                  "key": "hex",
+                  "value": "ffccff"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "",
+          "header": [],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "GET /hexToRgb – Invalid hex (ZZZZZZ)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/hexToRgb?hex=ZZZZZZ",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "hexToRgb"
+          ],
+          "query": [
+            {
+              "key": "hex",
+              "value": "ZZZZZZ"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /hexToRgb - Invalid hex (too short)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/hexToRgb?hex=%23123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "hexToRgb"
+          ],
+          "query": [
+            {
+              "key": "hex",
+              "value": "#123",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /hexToRgb - Invalid hex (too long)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/hexToRgb?hex=1234567",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "hexToRgb"
+          ],
+          "query": [
+            {
+              "key": "hex",
+              "value": "1234567"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /hexToRgb – Missing hex parameter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/hexToRgb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "hexToRgb"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET /hexToRgb – Missing hex parameter",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/hexToRgb?hox=123456",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "hexToRgb"
+              ],
+              "query": [
+                {
+                  "key": "hox",
+                  "value": "123456",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "",
+          "header": [],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": ""
+        }
+      ]
+    }
+  ]
+}

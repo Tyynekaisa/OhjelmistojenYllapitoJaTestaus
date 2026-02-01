@@ -112,9 +112,36 @@ The integration tests verify:
 The server is not started as a real HTTP listener during tests.
 Instead, the Express app is exported and tested directly.
 
-## Test Documentation
+## Testing
 
-// TO DO
+The project includes three different types of tests:
+
+* Unit Tests
+* Automated integration tests
+* Manual integration tests
+
+**Unit tests** and **automated integration tests** were executed together using a single command:
+
+```
+npm test
+```
+
+During test execution, **Mocha** ran all test files located in the test/ directory, including:
+
+* Unit tests for the **hexToRgb** utility function
+* Automated integration tests for the **Express REST API**
+
+Although executed together, the tests target different levels of the application.
+
+**Manual integration tests** were executed using **Postman** application.
+
+Unit tests verify the conversion logic in isolation, while automated and manual integration tests verify the full API behavior from request to response.
+
+### Testing Documentation
+
+* [Unit tests](/H3_IntegrationTesting/UnitTesting.md)
+* [Integration tests (automated)](/H3_IntegrationTesting/IntegrationTesting_automated.md)
+* [Integration tests (manual with Postman)](/H3_IntegrationTesting/IntegrationTesting_manual.md)
 
 ## Usage
 
