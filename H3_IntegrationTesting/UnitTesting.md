@@ -30,13 +30,9 @@ The following test cases were executed:
 
 * Hex color with leading # (e.g. #FF5733)
 * Hex color without # (e.g. 33FF57)
-
-### Expected result
-
-* Function returns an object with correct r, g, and b values
-* No errors are thrown
-
-___
+* Expected result:
+    * Function returns an object with correct r, g, and b values
+    * No errors are thrown
 
 ### Invalid Input Tests
 
@@ -45,11 +41,9 @@ The function was tested against several invalid inputs:
 * Missing argument (undefined)
 * Incorrect length (e.g. #FFF, 12345)
 * Invalid characters (e.g. ZZZZZZ)
-
-### Expected result
-
-* Function throws an error with the message:  
-"Invalid hex color string"
+* Expected result:
+    * Function throws an error with the message:  
+    "Invalid hex color string"
 
 ## Test Execution
 
@@ -68,7 +62,6 @@ To validate the effectiveness of the unit tests, intentional errors were introdu
 Examples of injected faults:
 
 * Removing input type validation
-* Skipping hex string length check
 * Allowing invalid hex characters
 * Returning incorrect RGB values
 
@@ -80,15 +73,22 @@ In all cases:
 
 ## Test Example Screenshots
 
-Screenshots were taken during unit testing to document:
+### Injected fault: Input type validation removed
 
-* Successful test execution
-* Failed tests caused by intentional code errors
-* Correct error messages reported by the test framework
+![Removing input type validation](/H3_IntegrationTesting/images/automatedTests/UnitTests_Failed_InputTypeValidation.png)  
 
-These screenshots serve as evidence that the unit tests were executed and validated during development.
+### Injected fault: Allowing invalid hex characters
 
+![Allowing invalid hex characters](/H3_IntegrationTesting/images/automatedTests/UnitTests_Failed_CharacterValidation.png)  
 
+### Injected fault: Returning incorrrect RGB values
+
+![Returning incorrect RGB](/H3_IntegrationTesting/images/automatedTests/UnitTests_Failed_HexError2.png)  
+![Returning incorrect RGB](/H3_IntegrationTesting/images/automatedTests/UnitTests_Failed_HexError2_1.png)  
+
+### All tests passed after restoring the correct implementation
+
+![Succesfull Unit tests](/H3_IntegrationTesting/images/automatedTests/UnitTests_Succesfull.png)  
 
 ## Conclusion
 

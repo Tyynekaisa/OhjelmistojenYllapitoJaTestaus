@@ -43,20 +43,20 @@ Some examples of tests. The whole Postman test collection attached here: [HexToR
 
 ### GET / - Root Endpoint
 
-![GET / - Root Endpoint](/H3_IntegrationTesting/images/integrationTests/root.png)
+![GET / - Root Endpoint](/H3_IntegrationTesting/images/manualTests/root.png)
 
 ### GET /hexToRgb – Valid hex (#FF5733)
 
-![GET /hexToRgb – Valid hex (#FF5733)](/H3_IntegrationTesting/images/integrationTests/validHex_%23FF5733.png)
+![GET /hexToRgb – Valid hex (#FF5733)](/H3_IntegrationTesting/images/manualTests/validHex_%23FF5733.png)
 
 ### GET /hexToRgb – Valid hex (33FF57)
 
-![GET /hexToRgb – Valid hex (33FF57)](/H3_IntegrationTesting/images/integrationTests/validHex_33FF57.png)
+![GET /hexToRgb – Valid hex (33FF57)](/H3_IntegrationTesting/images/manualTests/validHex_33FF57.png)
 
 ### GET /hexToRgb – Invalid hex (invalid characters)
 
-![GET /hexToRgb – Invalid hex (invalid characters)](/H3_IntegrationTesting/images/integrationTests/invalidHex.png)
+![GET /hexToRgb – Invalid hex (invalid characters)](/H3_IntegrationTesting/images/manualTests/invalidHex.png)
 
 ### GET /hexToRgb – Missing hex parameter
 
-![GET /hexToRgb – Missing hex parameter](/H3_IntegrationTesting/images/integrationTests/invalidHex_missingParameter.png)
+![GET /hexToRgb – Missing hex parameter](/H3_IntegrationTesting/images/manualTests/invalidHex_missingParameter.png)

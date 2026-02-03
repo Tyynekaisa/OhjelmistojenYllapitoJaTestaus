@@ -23,11 +23,11 @@ The API is tested without starting a real HTTP server.
 * Test framework: **Mocha**
 * Assertion library: **Chai (expect style)**
 * HTTP testing library: **Supertest**
-* Test file: test/server.test.js
+* Test file: [test/server.test.js](/H3_IntegrationTesting/test/server.test.js)
 
 ## Tested Component
 
-* File: src/server.js
+* File: [src/server.js](/H3_IntegrationTesting/src/server.js)
 * API: HexToRgb REST API
 
 The tests interact with the Express application directly by importing the app instance.
@@ -84,16 +84,26 @@ Invalid input values were intentionally tested to ensure that:
 
 This confirms that the API handles invalid input robustly.
 
-## Test Evidence
+## Test Example Screenshots
 
-Screenshots were taken during test execution to document:
+### Returns 400 and error message for invalid hex input
 
-* Successful integration test runs
-* Correct HTTP status codes
-* Correct response bodies
-* Failed tests during development when intentional errors were introduced
+![Returns 400 and error message for invalid hex input](/H3_IntegrationTesting/images/automatedTests/UnitTests_Failed_CharacterValidation.png)  
+The screenshot shows a failed automated integration test caused by an intentional error introduced into the backend validation logic.
 
-These screenshots demonstrate that the integration tests were executed and validated.
+### Incorrect HTTP status code detected by automated integration test
+
+![iIncorrect HTTP status code](/H3_IntegrationTesting/images/automatedTests/IntegrationTests_Failed_1.png)  
+![iIncorrect HTTP status code](/H3_IntegrationTesting/images/automatedTests/IntegrationTests_Failed.png)  
+This test case demonstrates a situation where unit tests pass successfully,
+but automated integration tests fail.
+
+The hexToRgb function throws an error as expected, so unit testing does not detect any issue.
+However, the Express API incorrectly returns HTTP 200 instead of 400 for invalid input.
+
+### All tests passed after restoring the correct implementation
+
+![Succesfull Unit and integration tests](/H3_IntegrationTesting/images/automatedTests/UnitTests_Succesfull.png)  
 
 ## Conclusion
 
