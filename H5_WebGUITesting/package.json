@@ -1,0 +1,21 @@
+{
+  "name": "hex-rgb-converter",
+  "author": "Kaisa Juhola",
+  "version": "1.0.0",
+  "description": "Excersise for WEB GUI Testing.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "set NODE_ENV=dev&& node ./src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^11.7.5",
+    "supertest": "^7.2.2"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs"
+}

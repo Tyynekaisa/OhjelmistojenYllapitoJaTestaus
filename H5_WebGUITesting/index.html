@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hex / RGB Converter</title>
+  <style>
+    body { font-family: Arial; margin: 2rem; }
+    input, button { padding: 0.5rem; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+
+  <h1>Hex to RGB</h1>
+
+  <input id="hexInput" placeholder="#FF5733">
+  <button onclick="convertHex()">Convert</button>
+
+  <p id="resultRgb"></p>
+
+  <script>
+    async function convertHex() {
+      const hex = document.getElementById("hexInput").value;
+      const resultRgb = document.getElementById("resultRgb");
+
+      try {
+        const res = await fetch(`/hexToRgb?hex=${encodeURIComponent(hex)}`);
+        const data = await res.json();
+
+        if (!res.ok) {
+          resultRgb.innerHTML = `<span class="error">${data.error}</span>`;
+        } else {
+          resultRgb.textContent = `RGB(${data.r}, ${data.g}, ${data.b})`;
+        }
+      } catch {
+        resultRgb.textContent = "Server not reachable";
+      }
+    }
+  </script>
+
+  <h1>RGB to hex</h1>
+
+  <input id="rInput" placeholder="255"> <input id="gInput" placeholder="0"> <input id="bInput" placeholder="0">
+  <button onclick="convertRgb()">Convert</button>
+
+  <p id="resultHex"></p>
+
+  <script>
+    async function convertRgb() {
+    const r = document.getElementById("rInput").value;
+    const g = document.getElementById("gInput").value;
+    const b = document.getElementById("bInput").value;
+
+      const resultHex = document.getElementById("resultHex");
+
+      try {
+        const res = await fetch(`/rgbToHex?r=${r}&g=${g}&b=${b}`);
+        const data = await res.json();
+
+        if (!res.ok) {
+          resultHex.innerHTML = `<span class="error">${data.error}</span>`;
+        } else {
+          resultHex.textContent = data;
+        }
+      } catch {
+        resultHex.textContent = "Server not reachable";
+      }
+    }
+  </script>
+
+</body>
+</html>
