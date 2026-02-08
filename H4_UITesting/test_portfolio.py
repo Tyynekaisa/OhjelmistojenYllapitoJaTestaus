@@ -6,7 +6,7 @@ Automated UI tests for my portfolio website using Selenium WebDriver and pytest.
 This test suite verifies basic page functionality and content, including:
 - Page title verification
 - Meta description correctness
-- Page navigation and interaction with elements such as links and cookie banners
+- Page and section navigation and interaction with elements such as links and buttons
 - Saves screenshot of the front-page for audit purposes.
 
 Requirements:
@@ -79,49 +79,16 @@ def test_portfolio_title(driver):
     
     time.sleep(2)  # not required, but pause so you can see the page
 
-# @pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
-# def test_lab_fi_meta_description(driver):
-#     """
-#     Verify that the LAB.fi homepage meta description is correct.
-
-#     Steps:
-#     1. Open the LAB.fi homepage.
-#     2. Optionally wait to visually confirm the page load.
-#     3. Locate the meta description using multiple methods (XPath or CSS selector).
-#     4. Assert that the content matches the expected description.
-
-#     Args:
-#         driver (webdriver.Chrome): Selenium WebDriver fixture.
-#     """
-#     print("Checking for correct meta description")
-    
-#     driver.get("https://tyynekaisa.github.io/Portfolio/")
-#     time.sleep(2)  # not required, but pause so you can see the page
-    
-#     ############# there are multiple ways of doing this #############
-#     meta_desc = driver.find_element(By.XPATH, "//head/meta[@name='description']") # use XPATH
-#     assert meta_desc.get_attribute("content") == "LAB is a higher education institution focusing on innovation, business and industry. It operates in Lahti and Lappeenranta and also provides education online."
-#     # OR
-#     meta_desc = WebDriverWait(driver, 5).until( # "same" as above, but wait up to 5 seconds for the element to appear in DOM in case it is not immediately populated
-#         EC.presence_of_element_located((By.XPATH, "//head/meta[@name='description']"))
-#     )
-#     assert meta_desc.get_attribute("content") == "LAB is a higher education institution focusing on innovation, business and industry. It operates in Lahti and Lappeenranta and also provides education online."
-#     # OR
-#     meta_desc = driver.find_element(By.CSS_SELECTOR, "head > meta[name='description']") # use CSS Selector
-#     assert meta_desc.get_attribute("content") == "LAB is a higher education institution focusing on innovation, business and industry. It operates in Lahti and Lappeenranta and also provides education online."
-    
-#     time.sleep(2)  # not required, but pause so you can see the page
-
 @pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
-def test_page_navigation(driver):
+def test_portfolio_meta_description(driver):
     """
-    Verify navigation from the portfolio homepage to a specific About me page.
+    Verify that the portfolio homepage meta description is correct.
 
     Steps:
     1. Open the portfolio homepage.
-    2. Handle the cookie banner if present.
-    3. Locate and click a specific link to navigate to the "About me" page.
-    4. Wait until navigation is complete and verify the URL contains the expected path.
+    2. Optionally wait to visually confirm the page load.
+    3. Locate the meta description using multiple methods (XPath or CSS selector).
+    4. Assert that the content matches the expected description.
 
     Args:
         driver (webdriver.Chrome): Selenium WebDriver fixture.
@@ -131,23 +98,41 @@ def test_page_navigation(driver):
     driver.get("https://tyynekaisa.github.io/Portfolio/")
     time.sleep(2)  # not required, but pause so you can see the page
     
-    try:    # let's see if a cookie banner appears, and try to close it.
-        cookie_button = WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((By.ID, "ppms_cm_reject-all")) # there is no universal, standard naming for the reject button, the id/class needs be checked from the page sources
-        )
-        cookie_button.click()
-        print("Cookie banner accepted")
-    except:
-        print("No cookie banner found, continuing...")
-
+    ############# there are multiple ways of doing this #############
+    meta_desc = driver.find_element(By.XPATH, "//head/meta[@name='description']") # use XPATH
+    assert meta_desc.get_attribute("content") == "Software and web developer student portfolio"
+    # OR
+    # meta_desc = WebDriverWait(driver, 5).until( # "same" as above, but wait up to 5 seconds for the element to appear in DOM in case it is not immediately populated
+    #     EC.presence_of_element_located((By.XPATH, "//head/meta[@name='description']"))
+    # )
+    # assert meta_desc.get_attribute("content") == "Software and web developer student portfolio"
+    # # OR
+    # meta_desc = driver.find_element(By.CSS_SELECTOR, "head > meta[name='description']") # use CSS Selector
+    # assert meta_desc.get_attribute("content") == "Software and web developer student portfolio"
+    
     time.sleep(2)  # not required, but pause so you can see the page
+
+@pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
+def test_page_navigation(driver):
+    """
+    Verify navigation from the portfolio homepage to a specific About me page.
+
+    Steps:
+    1. Open the portfolio homepage.
+    2. Locate and click a specific link to navigate to the "About me" page.
+    3. Wait until navigation is complete and verify the URL contains the expected path.
+    No cookie consent handling was required as the portfolio site does not use tracking cookies
+
+    Args:
+        driver (webdriver.Chrome): Selenium WebDriver fixture.
+    """
+    print("Checking for the page navigation")
     
-    #button = WebDriverWait(driver, 5).until(
-    #    EC.element_to_be_clickable((By.ID, "submit-button")) # finding a specific element to click on a dynamically generated page can be a bit challenging. Something like this might work.
-    #)
-    #button.click()
+    driver.get("https://tyynekaisa.github.io/Portfolio/")
+    time.sleep(2)  # not required, but pause so you can see the page
+
     
-    link = driver.find_element(By.CSS_SELECTOR, 'a[data-drupal-link-system-path="node/5"]') # but in this case, let's try to navigate by finding a specific Drupal node.
+    link = driver.find_element(By.LINK_TEXT, "ABOUT ME")
     link.click()
     
     WebDriverWait(driver, 10).until(EC.url_contains("/aboutme")) # wait until page navigation has completed
@@ -155,6 +140,32 @@ def test_page_navigation(driver):
     assert "/aboutme" in driver.current_url # check we arrived to the correct page, note: this only works if a real URL transition happened, if the contents were only dynamically updated, something else that has "changed" should be found on the page
     
     time.sleep(2)  # not required, but pause so you can see the page
+
+@pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
+def test_navigation_to_art_section(driver):
+    """
+    Verify navigation from the portfolio homepage to a specific section.
+
+    Steps:
+    1. Open the portfolio homepage.
+    2. Locate and click a specific link to navigate to the "Art" section.
+    3. Wait until navigation is complete and verify the URL contains the expected path.
+    No cookie consent handling was required as the portfolio site does not use tracking cookies
+
+    Args:
+        driver (webdriver.Chrome): Selenium WebDriver fixture.
+    """
+    print("Checking for the section navigation")
+    driver.get("https://tyynekaisa.github.io/Portfolio/")
+    
+    art_link = driver.find_element(By.LINK_TEXT, "ART")
+    art_link.click()
+
+    art_section = WebDriverWait(driver, 5).until(
+        EC.presence_of_element_located((By.ID, "art"))
+    )
+
+    assert art_section.is_displayed()
 
 @pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
 def test_front_page(driver):
