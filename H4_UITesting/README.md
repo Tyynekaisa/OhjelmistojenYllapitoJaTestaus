@@ -42,9 +42,9 @@ The following actions were performed while recording performance data:
 * Scrolling through the page
 * Observing image-heavy sections
 * Recording a performance trace
-* Reviewing results in the Performance, Network, and audit panels
+* Reviewing results in the Performance and Network panels
 
-## Performance Observations
+## Observations
 
 ### Load Times
 
@@ -77,7 +77,7 @@ Additionally, **font loading** took a noticeable amount of time and delayed prop
 
 ![Font loading](/H4_UITesting/images/fonts.png)
 
-## Layout Shift and Render-Blocking Resources
+### Layout Shift and Render-Blocking Resources
 
 The **Layout Shift Culprits** section of the performance report revealed that:
 
@@ -88,7 +88,7 @@ Further research is needed into the impact and optimization of these.
 
 ![Layout shift culprits](/H4_UITesting/images/render%20blocking.png)
 
-## DOM Size and Structure
+### DOM Size and Structure
 
 The **Optimize DOM Size** statistics showed:
 
@@ -111,16 +111,6 @@ This approach could also help reduce image loading overhead, as not all images w
 
 ![DOm size and structure](/H4_UITesting/images/dom.png)
 
-## Additional Aspects to Monitor
-
-Other important factors to consider during UI performance testing include:
-
-* **Cumulative Layout Shift (CLS)**: reserve fixed space for images and dynamic content
-* **First Contentful Paint (FCP) and Largest Contentful Paint (LCP)**: especially optimizing the hero image
-* **Critical CSS**: inline essential styles for above-the-fold content
-* **Third-party resources**: fonts, analytics scripts, and external libraries
-* **Mobile usability and accessibility**: touch target sizes, font readability, and contrast
-
 ## Passed Performance Insights
 
 The performance audit also reported several passed insights.
@@ -129,7 +119,7 @@ The performance audit also reported several passed insights.
 
 These passed results indicate that the site already follows many modern web performance best practices and that no critical issues were detected in these specific areas. As a result, protocol-level configuration, JavaScript duplication, and legacy script detection are not considered primary bottlenecks.
 
-Instead, the main performance challenges observed during testing are more likely caused by heavy image content, slow font loading, and render-blocking resources under throttled mobile conditions.
+Instead, **the main performance challenges observed during testing are likely caused by heavy image content, slow font loading, and render-blocking resources** under throttled mobile conditions.
 
 # Task 2 – Automated UI Testing with Selenium
 
