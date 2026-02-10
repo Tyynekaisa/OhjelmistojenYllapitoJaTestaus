@@ -46,10 +46,10 @@ def driver():
     service = Service(ChromeDriverManager().install())
     
     options = webdriver.ChromeOptions()
-    options.add_argument("--force-device-scale-factor=0.5")  # Zoom to make sure the page fits in the Chrome Window 1.0 = 100%, 1.5 = 150%, 0.5 = 50%
+    options.add_argument("--force-device-scale-factor=1.0")  # Zoom to make sure the page fits in the Chrome Window 1.0 = 100%, 1.5 = 150%, 0.5 = 50%
     # options.add_argument("--window-size=1920,1080")  # we could also set the initial window size, width, height in pixels
     
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    driver = webdriver.Chrome(service=service, options=options)
     driver.maximize_window()  # maximize the window
     yield driver
     driver.quit()
@@ -70,14 +70,11 @@ def test_portfolio_title(driver):
     print("Checking for correct page title")
     
     driver.get("https://tyynekaisa.github.io/Portfolio/")
-    time.sleep(2)  # not required, but pause so you can see the page
+    time.sleep(2)  # pause so you can see the page
     
     assert "Anna-Kaisa Juhola | Portfolio" in driver.title # use the Selenium's built-in property
-        
-    #title_element = driver.find_element(By.TAG_NAME, "title")                      # this might also work,
-    #assert "Anna-Kaisa Juhola | Portfolio" in title_element.text     # if the title is not dynamically updated
     
-    time.sleep(2)  # not required, but pause so you can see the page
+    time.sleep(2)
 
 @pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
 def test_portfolio_meta_description(driver):
@@ -96,21 +93,11 @@ def test_portfolio_meta_description(driver):
     print("Checking for correct meta description")
     
     driver.get("https://tyynekaisa.github.io/Portfolio/")
-    time.sleep(2)  # not required, but pause so you can see the page
+    time.sleep(2)
     
-    ############# there are multiple ways of doing this #############
     meta_desc = driver.find_element(By.XPATH, "//head/meta[@name='description']") # use XPATH
     assert meta_desc.get_attribute("content") == "Software and web developer student portfolio"
-    # OR
-    # meta_desc = WebDriverWait(driver, 5).until( # "same" as above, but wait up to 5 seconds for the element to appear in DOM in case it is not immediately populated
-    #     EC.presence_of_element_located((By.XPATH, "//head/meta[@name='description']"))
-    # )
-    # assert meta_desc.get_attribute("content") == "Software and web developer student portfolio"
-    # # OR
-    # meta_desc = driver.find_element(By.CSS_SELECTOR, "head > meta[name='description']") # use CSS Selector
-    # assert meta_desc.get_attribute("content") == "Software and web developer student portfolio"
-    
-    time.sleep(2)  # not required, but pause so you can see the page
+    time.sleep(2)
 
 @pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
 def test_page_navigation(driver):
@@ -129,20 +116,16 @@ def test_page_navigation(driver):
     print("Checking for the page navigation")
     
     driver.get("https://tyynekaisa.github.io/Portfolio/")
-    time.sleep(2)  # not required, but pause so you can see the page
+    time.sleep(2)
 
-    
     link = driver.find_element(By.LINK_TEXT, "ABOUT ME")
     link.click()
-    
     WebDriverWait(driver, 10).until(EC.url_contains("/aboutme")) # wait until page navigation has completed
-    
-    assert "/aboutme" in driver.current_url # check we arrived to the correct page, note: this only works if a real URL transition happened, if the contents were only dynamically updated, something else that has "changed" should be found on the page
-    
-    time.sleep(2)  # not required, but pause so you can see the page
+    assert "/aboutme" in driver.current_url # check we arrived to the correct page
+    time.sleep(2)
 
 @pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
-def test_navigation_to_art_section(driver):
+def test_navigation_to_section(driver):
     """
     Verify navigation from the portfolio homepage to a specific section.
 
@@ -157,15 +140,15 @@ def test_navigation_to_art_section(driver):
     """
     print("Checking for the section navigation")
     driver.get("https://tyynekaisa.github.io/Portfolio/")
+    time.sleep(2)
     
     art_link = driver.find_element(By.LINK_TEXT, "ART")
     art_link.click()
-
     art_section = WebDriverWait(driver, 5).until(
         EC.presence_of_element_located((By.ID, "art"))
     )
-
     assert art_section.is_displayed()
+    time.sleep(2)
 
 @pytest.mark.skip(reason="Skipping this test for demo")  # comment to enable the test
 def test_front_page(driver):
@@ -182,13 +165,12 @@ def test_front_page(driver):
     print("Checking that the front page looks OK")
     
     driver.get("https://tyynekaisa.github.io/Portfolio/")
-    time.sleep(2)  # not required, but pause so you can see the page
+    time.sleep(2)
     
     # Take a screenshot for debugging/reporting
     timestamp = int(time.time())
-    screenshot_file = f"screenshot_{timestamp}.png"
+    screenshot_file = f"images/screenshot_{timestamp}.png"
     driver.save_screenshot(screenshot_file) # take a screenshot to verify how the front page looked like
     print(f"Screenshot saved to {screenshot_file}")
-    
-    time.sleep(2)  # not required, but pause so you can see the page
+    time.sleep(2)
     
