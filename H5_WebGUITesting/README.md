@@ -82,7 +82,7 @@ The issue was resolved by restarting the backend server. This confirms that the 
 
 ### Invalid Input Handling
 
-![Invalid input values](/H5_WebGUITesting/images/SH4_InvalidInput.png)
+![Invalid input values](/H5_WebGUITesting/images/SH4_InvalidInput.png)  
 **Screenshot 4: Invalid input values and error messages**
 
 Examples of invalid inputs tested:
