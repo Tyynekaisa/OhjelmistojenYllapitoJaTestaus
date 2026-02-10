@@ -1,7 +1,7 @@
-# H4 UI Testing
+# UI Testing
 
 Course: **AT00BY10-3012 Ohjelmistojen ylläpito ja testaus**  
-Assignment: **H4 UI Testing**  
+Assignment: **IV - UI Testing**  
 Date: **10.2.2026**  
 Author: **Kaisa Juhola**
 
