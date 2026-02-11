@@ -23,6 +23,10 @@ env.bak/
 venv.bak/
 selenium-env
 
+# Logging
+logs
+*.log
+
 # Additional folders for exercises and personal use
 luentoharjoitus
 Tehtäväpalautukset
