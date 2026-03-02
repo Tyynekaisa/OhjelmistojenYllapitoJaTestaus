@@ -34,10 +34,13 @@ The purpose of the assignment is to demonstrate:
 ├── Task2/
 │   └── rest.http 
 │   └── src/
-│       └── logger.js
-│       └── main.js
-│       └── counter.js
-│       └── routes.js
+│   │   └── logger.js
+│   │   └── main.js
+│   │   └── counter.js
+│   │   └── routes.js
+│   └── test/
+│       └── counter.test.js
+├── images/                   # screenshots for documentation
 ├── README.md
 ├── package-lock.json
 └── package.json
