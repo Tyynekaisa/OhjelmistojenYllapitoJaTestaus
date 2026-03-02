@@ -53,11 +53,14 @@ The following files and directories are excluded from version control:
 These files are automatically generated and should not be committed to Git.  
 The .gitignore file is located at the [root of the entire course repository](../) and is shared between all course assignments.
 
+---
+---
+
 # Task 1 - Implementing Logging library
 
 ## Description - Task 1
 
-Task 1 demonstrates how to integrate the Winston logging library into a Node.js application.
+Task 1 demonstrates how to integrate the **Winston** logging library into a Node.js application.
 
 Logs are written:
 
@@ -122,15 +125,22 @@ After running the application:
   * logs/error.log (only error level logs)
 
 ![Console logs](/H6_Logging/images/logging1.png)  
-Console output example
+Console output
 
+![Combined](/H6_Logging/images/task1_combined.png)  
+Log file: combined.log
+
+![Errors](/H6_Logging/images/task1_error.png)  
+Log file: error.log
+
+---
 ---
 
 # Task 2 - Tally counter REST API
 
 ## Description - Task 2
 
-Task 2 implements a simple REST API using Express.
+Task 2 implements a simple REST API using **Express**.
 
 The application:
 
@@ -138,7 +148,6 @@ The application:
 * Uses **Winston** for structured logging
 * Maintains an in-memory integer counter
 * Separates application logic into modules
-* Includes automated tests using **Mocha** and **Supertest**
 
 ### Application Components
 
@@ -159,11 +168,7 @@ Configures Winston logging (same destinations as in Task 1).
 
 ### Security Notice
 
-Running `npm audit` reports vulnerabilities in transitive dependencies of Express 4.18.2.
-
-These vulnerabilities originate from internal Express dependencies and are not directly used in this educational project.
-
-The required Express version (4.18.2) was used as specified in the assignment instructions.
+Running `npm audit` reports vulnerabilities in transitive dependencies of Express 4.18.2. These vulnerabilities originate from internal Express dependencies and are not directly used in this educational project. The required Express version (4.18.2) was used as specified in the assignment instructions.
 
 ## Usage - Task 2
 
@@ -295,3 +300,8 @@ This project demonstrates:
 * Separation of concerns (routes, logic, configuration)
 * Manual and automated testing
 * Proper repository hygiene using `.gitignore`
+
+## Version History
+
+1.0.0 – Task 1: Winston logging implementation  
+1.1.0 – Task 2: Express REST API with logging and automated tests
