@@ -51,7 +51,7 @@ The following files and directories are excluded from version control:
 * logs/
 
 These files are automatically generated and should not be committed to Git.  
-The .gitignore file is located at the [root of the entire course repository](../) and is shared between all course assignments.
+The .gitignore file is located at the [root of the entire course repository](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus) and is shared between all course assignments.
 
 ---
 ---
