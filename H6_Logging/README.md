@@ -306,5 +306,5 @@ This project demonstrates:
 
 ## Version History
 
-0.1.0 – Initial Winston logging implementation (Task 1)
-1.0.0 – First stable REST API release with automated tests (Task 2)
+**0.1.0** – Initial Winston logging implementation (Task 1)  
+**1.0.0** – First stable REST API release with automated tests (Task 2)
