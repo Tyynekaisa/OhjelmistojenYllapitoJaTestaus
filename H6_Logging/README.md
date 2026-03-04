@@ -223,8 +223,8 @@ Temporary code for testing
 
 Task 2 includes automated tests using:
 
-* Mocha
-* Supertest
+* Mocha: 10.2.0
+* Supertest: 6.3.3
 
 Run tests with:
 
@@ -306,5 +306,5 @@ This project demonstrates:
 
 ## Version History
 
-1.0.0 – Task 1: Winston logging implementation  
-1.1.0 – Task 2: Express REST API with logging and automated tests
+0.1.0 – Initial Winston logging implementation (Task 1)
+1.0.0 – First stable REST API release with automated tests (Task 2)
