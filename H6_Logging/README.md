@@ -42,6 +42,7 @@ The purpose of the assignment is to demonstrate:
 │       └── counter.test.js
 ├── images/                   # screenshots for documentation
 ├── README.md
+├── LICENSE
 ├── package-lock.json
 └── package.json
 ```
@@ -308,3 +309,10 @@ This project demonstrates:
 
 **0.1.0** – Initial Winston logging implementation (Task 1)  
 **1.0.0** – First stable REST API release with automated tests (Task 2)
+
+## License
+
+[MIT License](/H6_Logging/LICENSE)
+
+This license applies only to the contents of the H6_logging directory.
+Other course assignments in this repository are not covered by this license.
