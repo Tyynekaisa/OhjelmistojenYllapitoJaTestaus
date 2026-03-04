@@ -28,5 +28,5 @@ After this course, student is able to:
 - [x] H4: [UI Testing](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H4_UITesting)
 - [x] H5: [WEB GUI Testing](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H5_WebGUITesting)
 - [x] H6: [Logging](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H6_Logging)
-- [ ] H7: Versioning and Licensing
+- [x] H7: [Versioning and Licensing](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H7_Versioning%26Licensing)
 - [ ] H8: Deployment
