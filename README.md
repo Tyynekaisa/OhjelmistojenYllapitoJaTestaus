@@ -5,7 +5,7 @@ School: **LAB University of Applied Sciences**
 Teacher: [**Petri Rantanen**](https://github.com/petri-rantanen)  
 Dates: **7.1.2026 - 31.7.2026**  
 Author: **Kaisa Juhola**  
-Last updated: **10.2.2026**
+Last updated: **4.3.2026**
 
 ## Learning goals
 
