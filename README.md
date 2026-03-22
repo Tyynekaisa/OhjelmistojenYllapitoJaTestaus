@@ -5,7 +5,7 @@ School: **LAB University of Applied Sciences**
 Teacher: [**Petri Rantanen**](https://github.com/petri-rantanen)  
 Dates: **7.1.2026 - 31.7.2026**  
 Author: **Kaisa Juhola**  
-Last updated: **4.3.2026**
+Last updated: **22.3.2026**
 
 ## Learning goals
 
@@ -20,7 +20,7 @@ After this course, student is able to:
 - Knows logging best practices
 - Can implement a simple CI/CD pipeline
 
-## Exercises
+## Assignments
 
 - [x] H1: [Markdown & HTML](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H1_Markdown%26HTML)
 - [x] H2: [Unit Testing](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H2_UnitTesting)
@@ -29,4 +29,4 @@ After this course, student is able to:
 - [x] H5: [WEB GUI Testing](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H5_WebGUITesting)
 - [x] H6: [Logging](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H6_Logging)
 - [x] H7: [Versioning and Licensing](https://github.com/Tyynekaisa/OhjelmistojenYllapitoJaTestaus/tree/main/H7_Versioning%26Licensing)
-- [ ] H8: Deployment
+- [x] H8: [Deployment](https://github.com/Tyynekaisa/deployment)
